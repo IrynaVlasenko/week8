@@ -1,0 +1,95 @@
+body {
+    font-family: "Bona Nova", serif;
+}
+
+.container {
+    max-width: 600px;
+    width: 50%;
+    margin: 50px auto;
+    background-color: #a1beee;
+    padding: 10px;
+    border: 1px solid #a1beee;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+.card {
+    background-image: url(img/dewang-gupta-ESEnXckWlLY-unsplash.jpg);
+    border: 1px solid white;
+}
+
+h2 {
+    color: white;
+    padding: 30px 0 0 30px;
+}
+
+h1 {
+    color: white;
+
+    font-size: calc(2.375rem + 2.5vw);
+    border: 3px solid #a1beee;
+    border-radius: 80px;
+    width: 55%;
+    text-align: center;
+    float: right;
+}
+
+.degrees {
+
+    font-size: 30px;
+}
+
+a.active {
+    color: white;
+    text-decoration: none;
+    cursor: default;
+}
+
+a.active:hover {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 100px;
+}
+
+.form-control {
+    display: inline;
+    width: 70%;
+}
+
+p {
+    margin-top: 15px;
+    color: white;
+    text-align: right;
+}
+
+h5 {
+    margin: 10px 0;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    border: 1px solid #4798e7;
+}
+
+.cont {
+    margin: 15px 0;
+}
+
+.row {
+    margin: 15px 0;
+    padding: 20px 0;
+    border: 1px solid white;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    background-image: url(img/dewang-gupta-ESEnXckWlLY-unsplash.jpg);
+}
+
+#description::first-letter {
+    text-transform: capitalize;
+}
+footer {
+text-align: center;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h2 id="city"></h2>
+                <h1>
+                    <span id="temperature"></span>
+                    <span class="degrees">
+                        <a href="#" id="celsius" class="active">°C</a>
+                        |
+                        <a href="#" id="fahrenheit">°F</a>
+                    </span>
+                    <br />
+                    <img id="icone" src="https://cdn.icon-icons.com/icons2/2505/PNG/512/sun_weather_icon_150657.png"
+                        alt="">
+                </h1>
+
+                <form id="city-search">
+                    <input type="text" class="form-control" id="search-text" placeholder="Search" autocomplete="off" />
+                    <button type="button" class="btn btn-primary" id="search-button">
+                        Search
+                    </button>
+
+                </form>
+
+                <p>
+                    Last updated:
+                    <span id="today">Saturday</span>
+                </p>
+                <p id="description">Snowing</p>
+                <p>Humidity <span id="humidity">77</span>% </p>
+                <p>Wind <span id="wind">30</span>km/h </p>
+            </div>
+        </div>
+        <h5>The forecast for the next 5 days</h5>
+        <div class="weather-forecast">
+            <div class="row">
+                <div class="col">Mon</div>
+                <div class="col"><img src="https://cdn.icon-icons.com/icons2/2505/PNG/512/sun_weather_icon_150657.png"
+                        alt="" width="4"></div>
+                <div class="col"><span class="weather-forecast-temperature-max"> 18° </span>
+                    <span class="weather-forecast-temperature-min"> 12° </span>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <footer> <a href="https://github.com/IrynaVlasenko/vanilla-weather-app">Open-source code</a> and <a
+            href="https://tranquil-biscotti-d7afc4.netlify.app">hosted on Netlify</a> by Iryna Vlasenko
+    </footer>
+    <script src="js.js"></script>
+</body>
+
+</html>
