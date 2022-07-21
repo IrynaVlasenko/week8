@@ -20,7 +20,8 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = "";
@@ -31,7 +32,7 @@ function displayForecast() {
       `<div class="row">
                 <div class="col">${day}</div>
                 <div class="col"><img src="https://cdn.icon-icons.com/icons2/2505/PNG/512/sun_weather_icon_150657.png"
-                        alt=""></div>
+                        alt="" width="100"></div>
                 <div class="col"><span class="weather-forecast-temperature-max"> 18° </span>
                     <span class="weather-forecast-temperature-min"> 12° </span>
                 </div>
@@ -39,6 +40,12 @@ function displayForecast() {
   });
   forecastElement.innerHTML = forecastHTML;
 }
+function getForecast(coodinates) {
+  let apiKey = "fb4ad69a2bb4c6370849b9a18c3de8e4";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coodinates.lat}&lon=${coodinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -57,6 +64,7 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getForecast(response.data.coord);
 
   celsiusTemperature = response.data.main.temp;
 }
@@ -101,7 +109,6 @@ showCity.addEventListener("submit", showsearch);
 let fahrenTemp = document.querySelector("#fahrenheit");
 fahrenTemp.addEventListener("click", changeTemp);
 search("Texas");
-displayForecast();
 
 let celsTemp = document.querySelector("#celsius");
 celsTemp.addEventListener("click", changeTempBack);
