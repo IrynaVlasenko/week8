@@ -20,15 +20,14 @@ body {
 
 h2 {
     color: white;
+    text-shadow: 1px 1px 2px black;
     padding: 30px 0 0 30px;
 }
 
 h1 {
     color: white;
-
+    text-shadow: 1px 1px 2px black;
     font-size: calc(2.375rem + 2.5vw);
-    border: 3px solid #a1beee;
-    border-radius: 80px;
     width: 55%;
     text-align: center;
     float: right;
@@ -39,8 +38,13 @@ h1 {
     font-size: 30px;
 }
 
+a {
+    color: #a1beee;
+}
+
 a.active {
     color: white;
+    text-shadow: 1px 1px 2px black;
     text-decoration: none;
     cursor: default;
 }
@@ -48,10 +52,15 @@ a.active {
 a.active:hover {
     text-decoration: none;
     color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 img {
-    width: 100px;
+    width: 60px;
+}
+
+#icone {
+    width: 120px;
 }
 
 .form-control {
@@ -62,6 +71,7 @@ img {
 p {
     margin-top: 15px;
     color: white;
+    text-shadow: 1px 1px 2px black;
     text-align: right;
 }
 
@@ -69,6 +79,7 @@ h5 {
     margin: 10px 0;
     padding: 5px;
     color: white;
+    text-shadow: 1px 1px 2px black;
     text-align: center;
     border: 1px solid #4798e7;
 }
@@ -82,14 +93,18 @@ h5 {
     padding: 20px 0;
     border: 1px solid white;
     color: white;
+    text-shadow: 1px 1px 2px black;
     font-size: 24px;
     text-align: center;
     background-image: url(img/dewang-gupta-ESEnXckWlLY-unsplash.jpg);
+
+
 }
 
 #description::first-letter {
     text-transform: capitalize;
 }
+
 footer {
-text-align: center;
+    text-align: center;
 }
